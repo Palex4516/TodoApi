@@ -18,15 +18,17 @@ GET {{TodoApi_HostAddress}}/api/todoitems/1
 
 ###
 
-DELETE {{TodoApi_HostAddress}}/api/todoitems/0
+DELETE {{TodoApi_HostAddress}}/api/todoitems/1
 
 ###
 
-PUT {{TodoApi_HostAddress}}/api/todoitems/0
+PUT {{TodoApi_HostAddress}}/api/todoitems/2
 Content-Type: application/json
 
 {
-  //TodoItem
+  "id": 2,
+  "name": "Your Dad!",
+  "isComplete": true
 }
 
 ###
