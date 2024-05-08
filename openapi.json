@@ -2,8 +2,8 @@
   "x-generator": "NSwag v14.0.7.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))",
   "openapi": "3.0.0",
   "info": {
-    "title": "My Title",
-    "version": "1.0.0"
+    "title": "TodoApi",
+    "version": "1.0.2"
   },
   "paths": {
     "/api/TodoItems": {
