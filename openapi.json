@@ -3,7 +3,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "TodoApi",
-    "version": "1.0.11"
+    "version": "1.0.12"
   },
   "paths": {
     "/api/TodoItems": {
