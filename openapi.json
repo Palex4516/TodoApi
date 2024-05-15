@@ -177,8 +177,7 @@
             "format": "int64"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "done": {
             "type": "boolean"
