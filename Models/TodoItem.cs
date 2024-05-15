@@ -9,6 +9,6 @@
 
         public TodoItem() { }
         public TodoItem(TodoItemDTO todoItemDTO) =>
-            (Id, Name, IsComplete) = (todoItemDTO.Id, todoItemDTO.Name, todoItemDTO.IsComplete);
+            (Id, Name, IsComplete) = (todoItemDTO.Id, todoItemDTO.Name, todoItemDTO.Done);
     }
 }

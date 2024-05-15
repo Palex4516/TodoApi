@@ -48,7 +48,7 @@ namespace TodoApi.Controllers
             if (await context.TodoItems.FindAsync(id) is TodoItem todoItem)
             {
                 todoItem.Name = todoItemDTO.Name;
-                todoItem.IsComplete = todoItemDTO.IsComplete;
+                todoItem.IsComplete = todoItemDTO.Done;
                 await context.SaveChangesAsync();
                 return NoContent();
             }
