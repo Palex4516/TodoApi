@@ -180,7 +180,7 @@
             "type": "string",
             "nullable": true
           },
-          "isComplete": {
+          "done": {
             "type": "boolean"
           }
         }
