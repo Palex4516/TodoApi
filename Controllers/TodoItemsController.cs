@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Net;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NSwag.Annotations;
 using TodoApi.Models;
 
 namespace TodoApi.Controllers
@@ -38,6 +40,9 @@ namespace TodoApi.Controllers
 
         // PUT: api/TodoItems/{id}
         [HttpPut("{id}")]
+        [SwaggerResponse(HttpStatusCode.NoContent, typeof(NoContentResult), Description = "Returns no content")]
+        [SwaggerResponse(HttpStatusCode.BadRequest, typeof(BadRequestResult), Description = "If request is bad")]
+        [SwaggerResponse(HttpStatusCode.NotFound, typeof(NotFoundResult), Description = "If not found")]
         public async Task<IActionResult> PutTodoItem(long id, TodoItemDTO todoItemDTO)
         {
             if (id != todoItemDTO.Id)
