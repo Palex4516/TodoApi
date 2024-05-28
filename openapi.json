@@ -121,7 +121,7 @@
         },
         "responses": {
           "204": {
-            "description": "Returns no content\nor\nIf not found",
+            "description": "Returns no content",
             "content": {
               "application/octet-stream": {
                 "schema": {
@@ -129,26 +129,21 @@
                   "format": "binary"
                 }
               }
-            },
-            "x-expectedSchemas": [
-              {
-                "description": "Returns no content",
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                }
-              },
-              {
-                "description": "If not found",
+            }
+          },
+          "400": {
+            "description": "If request is bad",
+            "content": {
+              "application/octet-stream": {
                 "schema": {
                   "type": "string",
                   "format": "binary"
                 }
               }
-            ]
+            }
           },
-          "400": {
-            "description": "If request is bad",
+          "404": {
+            "description": "If not found",
             "content": {
               "application/octet-stream": {
                 "schema": {
