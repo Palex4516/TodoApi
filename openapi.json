@@ -14,7 +14,7 @@
         "operationId": "TodoItems_GetAllTodoItems",
         "responses": {
           "200": {
-            "description": "",
+            "description": "Returns list of TodoItems",
             "content": {
               "application/json": {
                 "schema": {
@@ -46,8 +46,8 @@
           "x-position": 1
         },
         "responses": {
-          "200": {
-            "description": "",
+          "201": {
+            "description": "TodoItem Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -79,11 +79,22 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Returns a TodoItem",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/TodoItemDTO"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "If not found",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
                 }
               }
             }
@@ -173,8 +184,19 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "",
+          "204": {
+            "description": "Returns no content",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "If not found",
             "content": {
               "application/octet-stream": {
                 "schema": {
